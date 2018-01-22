@@ -3,16 +3,84 @@
   <head>
     <meta charset="utf-8">
     <title>Title Page</title>
+    <!-- Style Sheets  -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="landing-style.css">
   </head>
   <body>
-    <h1> Hello World </h1>
-   <p> Text here for placement</p>
+  <!-- New Navigation Start -->
+  <nav class="navigation">
+    <ul class="menu">
+      <!-- Navigation Item Start  -->
+      <li class="navigation-link">
+        <a href="day-02.html" target="_blank" data-overlay='.overlay-bg-day-02'> Day 2 </a>
+      </li>
+      <!-- Navigation Item End -->
 
-   <a href="day-02.html"target="_blank">Day 02</a>
-   <a href="day-03.html"target="_blank">Day 03</a>
-   <a href="day-04.html"target="_blank">Day 04 </a>
-   <a href="day-05.html"target="_blank">Day 05</a>
-   <a href="day-06.html"target="_blank">Day 06</a>
+      <!-- Navigation Item Start  -->
+      <li class="navigation-link">
+        <a href="day-03.html" target="_blank" data-overlay='.overlay-bg-day-03'> Day 3 </a>
+      </li>
+      <!-- Navigation Item End -->
 
+      <!-- Navigation Item Start  -->
+      <li class="navigation-link">
+        <a href="day-04.html" target="_blank" data-overlay=".overlay-bg-day-04"> Day 4 </a>
+      </li>
+      <!-- Navigation Item End -->
+
+      <!-- Navigation Item Start  -->
+      <li class="navigation-link">
+        <a href="day-05.html" target="_blank" data-overlay=".overlay-bg-day-05"> Day 5 </a>
+      </li>
+      <!-- Navigation Item End -->
+
+      <!-- Navigation Item Start  -->
+      <li class="navigation-link">
+        <a href="day-06.html" target="_blank" data-overlay=".overlay-bg-day-06"> Day 6 </a>
+      </li>
+      <!-- Navigation Item End -->
+
+      <!-- Navigation Item Start  -->
+      <li class="navigation-link">
+        <a href="day-07.html" target="_blank" data-overlay=".overlay-bg-day-07"> Day 7 </a>
+      </li>
+      <!-- Navigation Item End -->
+
+      <!-- Navigation Item Start  -->
+      <li class="navigation-link">
+        <a href="day-08.html" target="_blank"  data-overlay=".overlay-bg-day-08"> Day 8 </a>
+      </li>
+      <!-- Navigation Item End -->
+    </ul>
+  </nav>
+  <!-- New Navigation End -->
+
+  <!-- Background Overlays  -->
+  <div class="overlay-bg overlay-bg-day-02 visible"></div>
+  <div class="overlay-bg overlay-bg-day-03"></div>
+  <div class="overlay-bg overlay-bg-day-04"></div>
+  <div class="overlay-bg overlay-bg-day-05"></div>
+  <div class="overlay-bg overlay-bg-day-06"></div>
+  <div class="overlay-bg overlay-bg-day-07"></div>
+  <div class="overlay-bg overlay-bg-day-08"></div>
+  <div class="overlay-bg overlay-bg-day-09"></div>
   </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+  // I know I know, this is bad practice D:
+  var overlays = $('.overlay-bg')
+
+  $('.navigation-link a').hover(function(){
+
+    var link = $(this)
+    var overlay = link.data('overlay')
+    overlays.removeClass('visible')
+    $(overlay).addClass('visible')
+    return false
+  })
+  </script>
 </html>
